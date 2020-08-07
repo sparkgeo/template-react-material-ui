@@ -1,5 +1,5 @@
 import React from 'react'
-import { GenericContainer, SampleWidget } from '..'
+import { GenericContainer, SampleWidget } from '.'
 
 const Layout = () => {
   return (

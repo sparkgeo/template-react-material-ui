@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import SampleWidget from './index'
+import SampleWidget from './SampleWidget'
 
 test('renders without crashing', async () => {
   const { getAllByText } = render(<SampleWidget />)
