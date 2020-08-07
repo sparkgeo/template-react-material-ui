@@ -6,18 +6,27 @@
 
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { Grommet } from 'grommet'
+import {
+  ThemeProvider as MuiThemeProvider,
+  createMuiTheme,
+} from '@material-ui/core'
 
 import { Layout } from './components'
 import theme from './theme'
 import './App.css'
 
+const muiTheme = createMuiTheme({
+  // status: {
+  //   danger: orange[500],
+  // },
+})
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Grommet theme={theme} full>
+      <MuiThemeProvider theme={muiTheme} full>
         <Layout />
-      </Grommet>
+      </MuiThemeProvider>
     </ThemeProvider>
   )
 }
