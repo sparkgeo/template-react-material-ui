@@ -1,14 +1,24 @@
 import React from 'react'
-import { GenericContainer, SampleWidget } from '.'
+import PropTypes from 'prop-types'
 
-const Layout = () => {
+import Navbar from './Navbar'
+
+function Layout({ children }) {
   return (
     <>
-      <div>Hello new app</div>
-      <GenericContainer>box</GenericContainer>
-      <SampleWidget />
+      <Navbar />
+
+      {children}
     </>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node,
+}
+
+Layout.defaultProps = {
+  children: <></>,
 }
 
 export default Layout
