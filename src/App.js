@@ -11,7 +11,7 @@ import {
   createMuiTheme,
 } from '@material-ui/core'
 
-import { Layout } from './components'
+import Home from './pages/Home'
 import theme from './theme'
 import './App.css'
 
@@ -25,7 +25,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <MuiThemeProvider theme={muiTheme} full>
-        <Layout />
+        <Home />
       </MuiThemeProvider>
     </ThemeProvider>
   )
